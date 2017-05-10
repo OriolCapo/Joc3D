@@ -7,7 +7,7 @@ public class HoverMotor : MonoBehaviour {
     public float speed = 90f;
     public float turnSpeed = 5f;
     public float hoverForce = 65f;
-    public float hoverHeight = 3.5f;
+    public float hoverHeight = 1.25f;
 
     private float powerInput;
     private float turnInput;
