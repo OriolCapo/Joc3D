@@ -25,7 +25,7 @@ public class HoverMotor : MonoBehaviour {
 
     void FixedUpdate()
     {
-        Ray ray = new Ray(transform.position, -transform.up);
+        /*Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, hoverHeight))
@@ -34,10 +34,11 @@ public class HoverMotor : MonoBehaviour {
             Vector3 appliedHoverForce = Vector3.up * proportionalHeight * hoverForce;
 
             carRigidBody.AddForce(appliedHoverForce, ForceMode.Acceleration);
-        }
+        }*/
 
         carRigidBody.AddRelativeForce(powerInput * speed, 0f, 0f);
-        carRigidBody.AddRelativeTorque(0f, turnInput * turnSpeed, 0f);
+		transform.Rotate (0, turnInput*2, 0);
+        //carRigidBody.AddRelativeTorque(0f, turnInput * turnSpeed, 0f);
 
     }
 }
