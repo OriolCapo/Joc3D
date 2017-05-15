@@ -48,10 +48,12 @@ public class Hover : MonoBehaviour {
 				transform.position - 0.5f * transform.up);
 
 		// Rotation
-		GetComponent<Rigidbody>().AddTorque(rotationMag * Input.GetAxis("Horizontal") * transform.up);
+		//GetComponent<Rigidbody>().AddTorque(rotationMag * Input.GetAxis("Horizontal") * transform.up);
+		transform.Rotate(rotationMag * Input.GetAxis("Horizontal") * transform.up);
 
 		// Traction
 		GetComponent<Rigidbody>().AddForce(-0.1f * Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.right) * transform.right);
 
+		Debug.Log (transform.position);
 	}
 }

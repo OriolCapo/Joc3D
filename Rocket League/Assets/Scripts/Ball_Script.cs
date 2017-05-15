@@ -23,10 +23,10 @@ public class Ball_Script : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position [2] < -230) {
+		if (transform.position [2] < -150) {
 			++count_t1;
 			setBallToCenter ();
-		} else if (transform.position [2] > 228) {
+		} else if (transform.position [2] > 150) {
 			++count_t2;
 			setBallToCenter ();
 		}
@@ -40,7 +40,10 @@ public class Ball_Script : MonoBehaviour {
 		int current = (int)totalTime;
 		int min = current / 60;
 		int sec = current % 60;
-		time.text = min.ToString () + ":" + sec.ToString ();
+		time.text = min.ToString () + ":";
+		if (sec < 10)
+			time.text += "0";
+		time.text += sec.ToString ();
 	}
 
 	void setBallToCenter(){

@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket League", "Assembly-CSharp-firstpass.csproj", "{88006B95-6BD6-ADF6-FA48-91F662619735}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket League", "Assembly-CSharp.csproj", "{4C000D17-B87B-C45C-A280-22069D2E2517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket League", "Assembly-CSharp-Editor-firstpass.csproj", "{1B467D75-9DC9-F990-FBE1-29639D6936C9}"
+EndProject
+Project("{363F6C1A-1941-81DE-FCF9-D77291BAAB60}") = "Rocket League", "Assembly-UnityScript.unityproj", "{8A2B95A8-3DB3-BA0A-89D7-2B8A23E0E14D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +15,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88006B95-6BD6-ADF6-FA48-91F662619735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88006B95-6BD6-ADF6-FA48-91F662619735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88006B95-6BD6-ADF6-FA48-91F662619735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88006B95-6BD6-ADF6-FA48-91F662619735}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4C000D17-B87B-C45C-A280-22069D2E2517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4C000D17-B87B-C45C-A280-22069D2E2517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C000D17-B87B-C45C-A280-22069D2E2517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C000D17-B87B-C45C-A280-22069D2E2517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B467D75-9DC9-F990-FBE1-29639D6936C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B467D75-9DC9-F990-FBE1-29639D6936C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B467D75-9DC9-F990-FBE1-29639D6936C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B467D75-9DC9-F990-FBE1-29639D6936C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2B95A8-3DB3-BA0A-89D7-2B8A23E0E14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2B95A8-3DB3-BA0A-89D7-2B8A23E0E14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2B95A8-3DB3-BA0A-89D7-2B8A23E0E14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2B95A8-3DB3-BA0A-89D7-2B8A23E0E14D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
