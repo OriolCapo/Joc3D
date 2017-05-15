@@ -7,9 +7,11 @@ public class Ball_Script : MonoBehaviour {
 
 	private int count_t1, count_t2;
 	private Rigidbody rb;
+	private float totalTime = 180f;
 
 	public Text t1;
 	public Text t2;
+	public Text time;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,11 @@ public class Ball_Script : MonoBehaviour {
 	void updateText() {
 		t1.text = count_t1.ToString ();
 		t2.text = count_t2.ToString ();
+		totalTime -= Time.deltaTime;
+		int current = (int)totalTime;
+		int min = current / 60;
+		int sec = current % 60;
+		time.text = min.ToString () + ":" + sec.ToString ();
 	}
 
 	void setBallToCenter(){
