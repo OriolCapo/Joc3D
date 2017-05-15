@@ -25,19 +25,21 @@ public class HoverMotor : MonoBehaviour {
 
     void FixedUpdate()
     {
-        /*Ray ray = new Ray(transform.position, -transform.up);
+        Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, hoverHeight))
         {
-            float proportionalHeight = (hoverHeight - hit.distance) /(2* hoverHeight);
+            float proportionalHeight = (hoverHeight - hit.distance) /(hoverHeight);
             Vector3 appliedHoverForce = Vector3.up * proportionalHeight * hoverForce;
 
             carRigidBody.AddForce(appliedHoverForce, ForceMode.Acceleration);
-        }*/
+        }
 
-        carRigidBody.AddRelativeForce(powerInput * speed, 0f, 0f);
+        //carRigidBody.AddRelativeForce(powerInput * speed, 0f, 0f);
+		carRigidBody.AddForce(transform.forward * powerInput * speed, ForceMode.Impulse);
 		transform.Rotate (0, turnInput*2, 0);
+
         //carRigidBody.AddRelativeTorque(0f, turnInput * turnSpeed, 0f);
 
     }

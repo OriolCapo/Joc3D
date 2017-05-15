@@ -6,15 +6,18 @@ public class CameraController : MonoBehaviour {
 
     public GameObject player;
 
-    private Vector3 offset;
+	private Vector3 offset1;//, offset2;
 
     void Start()
     {
-        offset = new Vector3(0, 20, -50);
+        offset1 = new Vector3(0, 5, -10);
+		//offset2 = new Vector3(0, 0, -40);
     }
 
     void Update()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = player.transform.position + offset1;
+		//transform.forward = player.transform.forward + (player.transform.position - transform.position);// + offset2;
+		//transform.rotation = player.transform.rotation;
     }
 }
