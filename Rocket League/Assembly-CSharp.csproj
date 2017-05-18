@@ -59,8 +59,6 @@
      <Compile Include="Assets\Scripts\Ball_Script.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Enemy_Controller.cs" />
-     <Compile Include="Assets\Scripts\Hover.cs" />
-     <Compile Include="Assets\Scripts\HoverMotor.cs" />
      <Compile Include="Assets\Scripts\RandomJump.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />

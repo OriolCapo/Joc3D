@@ -30,6 +30,13 @@ public class Ball_Script : MonoBehaviour {
 			++count_t2;
 			setBallToCenter ();
 		}
+
+		if (Input.GetKeyDown("1")) {
+			++count_t1;
+		}
+		if (Input.GetKeyDown("2")) {
+			++count_t2;
+		}
 		updateText ();
 	}
 
