@@ -23,10 +23,10 @@ public class Ball_Script : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position [2] < -150) {
+		if (transform.position [2] < -170) {
 			++count_t1;
 			setBallToCenter ();
-		} else if (transform.position [2] > 150) {
+		} else if (transform.position [2] > 170) {
 			++count_t2;
 			setBallToCenter ();
 		}
