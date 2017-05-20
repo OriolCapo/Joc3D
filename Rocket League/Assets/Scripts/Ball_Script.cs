@@ -13,6 +13,9 @@ public class Ball_Script : MonoBehaviour {
 	public Text t2;
 	public Text time;
 
+    public AudioSource audio_hit_car;
+    public AudioSource audio_hit_field;
+
 	// Use this for initialization
 	void Start () {
 		count_t1 = 0;
@@ -58,4 +61,15 @@ public class Ball_Script : MonoBehaviour {
 		rb.isKinematic = true;
 		rb.isKinematic = false;
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Car"))
+        {
+            audio_hit_car.Play();
+        }
+        else{
+            audio_hit_field.Play();
+        }
+    }
 }
