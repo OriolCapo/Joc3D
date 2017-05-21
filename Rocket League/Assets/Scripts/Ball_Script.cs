@@ -13,7 +13,7 @@ public class Ball_Script : MonoBehaviour {
 	public Text t2;
 	public Text time;
 
-    public AudioSource audio_hit_car;
+    //public AudioSource audio_hit_car;
     public AudioSource audio_hit_field;
 
 	// Use this for initialization
@@ -66,7 +66,7 @@ public class Ball_Script : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Car"))
         {
-            audio_hit_car.Play();
+            //audio_hit_car.Play();
         }
         else{
             audio_hit_field.Play();
