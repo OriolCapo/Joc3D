@@ -96,9 +96,11 @@
     <Compile Include="Assets\Scripts\DropMe.cs" />
     <Compile Include="Assets\Scripts\Enemy_Controller.cs" />
     <Compile Include="Assets\Scripts\HitSomething.cs" />
+    <Compile Include="Assets\Scripts\LoadOnEnter.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\PanelManager.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
+    <Compile Include="Assets\Scripts\QuitOnEnter.cs" />
     <Compile Include="Assets\Scripts\RandomJump.cs" />
     <Compile Include="Assets\Scripts\RecieveHit.cs" />
     <Compile Include="Assets\Scripts\ResizePanel.cs" />
