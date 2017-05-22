@@ -34,10 +34,10 @@ public class Ball_Script : MonoBehaviour {
 			setBallToCenter ();
 		}
 
-		if (Input.GetKeyDown("1")) {
+		if (Input.GetKeyDown("o")) {
 			++count_t1;
 		}
-		if (Input.GetKeyDown("2")) {
+		if (Input.GetKeyDown("p")) {
 			++count_t2;
 		}
 		updateText ();
