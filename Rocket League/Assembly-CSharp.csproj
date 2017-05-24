@@ -79,10 +79,10 @@
      <Compile Include="Assets\Scripts\Scripts CarController\Suspension.cs" />
      <Compile Include="Assets\Scripts\Scripts CarController\WheelEffects.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Scripts\SelectCars.cs" />
      <Compile Include="Assets\Scripts\SelectOnInput.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />
-     <Compile Include="Assets\SelectCars.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
