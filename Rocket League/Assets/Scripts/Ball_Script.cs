@@ -34,6 +34,9 @@ public class Ball_Script : MonoBehaviour {
 			setBallToCenter ();
 		}
 
+		if (Input.GetKeyDown ("r"))
+			setBallToCenter ();
+
 		if (Input.GetKeyDown("o")) {
 			++count_t1;
 		}

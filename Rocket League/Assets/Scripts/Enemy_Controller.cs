@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class Enemy_Controller : MonoBehaviour {
 
-	private GameObject ball;
 	public float speed = 1000.0f;
 	public int goal = 1;
+	public WheelCollider[] wheelColliders;
 
+	private GameObject ball;
 	private Rigidbody rb;
-	private LineRenderer laserLine;
-
 	private Vector3 positionBehindBall;
 
-	private bool goHit;
-	private bool goBehind;
-
-	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-		laserLine = GetComponent<LineRenderer> ();
 		ball = GameObject.Find ("Ball");
-		goHit = false;
-		goBehind = true;
 	}
-	
-	// Update is called once per frame
+
 	void FixedUpdate () {
 		updatePosition ();
 		if (shallGoBehindBall ()) {
@@ -33,28 +24,6 @@ public class Enemy_Controller : MonoBehaviour {
 		} else {
 			goToHitBall ();
 		}
-			
-
-		//rb.AddForce (transform.forward * speed);
-		//print (transform.position);
-		/*
-		Vector3 lineStart = new Vector3(transform.position.x, transform.position.y+5, transform.position.z);
-		Vector3 lineEnd = lineStart + (transform.forward * 500f);// + new Vector3(0,10,0);
-		laserLine.SetPosition (0, lineStart);
-		laserLine.SetPosition (1, lineEnd);
-
-		RaycastHit hit;
-		if (Physics.Raycast (lineStart, transform.forward, out hit, 500f)) {
-			if (hit.rigidbody != null && hit.transform.CompareTag ("Ball")) {
-				rb.AddForce (transform.forward * speed);
-				//Debug.Log ("avança");
-			} else {
-				
-				rb.AddForce (transform.forward * 100);
-			}
-		}
-		*/
-		//Debug.Log (transform.position);
 	}
 
 	void updatePosition() {
@@ -71,16 +40,12 @@ public class Enemy_Controller : MonoBehaviour {
 		Vector3 currPos = transform.position;
 		Vector3 ballPos = ball.transform.position;
 		if (currPos.z >= ballPos.z) {
-			//Debug.Log ("GO BEHIND Z<Z   " + rb.velocity);
 			return true; 
 		}
 		if(Mathf.Abs (ballPos.x - currPos.x) > 50) {
-			//Debug.Log ("GO BEHIND X--X   " + rb.velocity);
 			return true;
 		}
 		else {
-			//Debug.Log ("GO HIT   " + rb.velocity);
-			goBehind = false;
 			return false;
 		}
 	}
@@ -112,7 +77,6 @@ public class Enemy_Controller : MonoBehaviour {
 		transform.rotation = Quaternion.Slerp(transform.rotation, 
 								Quaternion.LookRotation(posToGo), 
 								Time.deltaTime*3);
-		//Vector3.Normalize (posToGo);
 		posToGo = posToGo.normalized;
 		rb.AddForce (transform.forward * speed);
 	}

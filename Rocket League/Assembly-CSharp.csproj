@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\RestartPositions.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Ball_Script.cs" />
@@ -67,10 +66,23 @@
      <Compile Include="Assets\Scripts\RandomJump.cs" />
      <Compile Include="Assets\Scripts\RecieveHit.cs" />
      <Compile Include="Assets\Scripts\ResizePanel.cs" />
+     <Compile Include="Assets\Scripts\RestartPositions.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\Bots_Controller.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\BrakeLight.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\CarAIControl.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\CarAudio.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\CarController.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\CarSelfRighting.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\CarUserControl.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\Mudguard.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\SkidTrail.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\Suspension.cs" />
+     <Compile Include="Assets\Scripts\Scripts CarController\WheelEffects.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
      <Compile Include="Assets\Scripts\SelectOnInput.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />
+     <Compile Include="Assets\SelectCars.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
@@ -93,7 +105,6 @@
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
-     <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
