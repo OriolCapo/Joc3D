@@ -60,6 +60,8 @@ public class Ball_Script : MonoBehaviour {
 		transform.position = new Vector3 (0, 5, 0);
 		rb.isKinematic = true;
 		rb.isKinematic = false;
+		RestartPositions rp = GameObject.Find ("Stadium3").gameObject.GetComponent<RestartPositions> ();
+		rp.restartPositions ();
 	}
 
     private void OnCollisionEnter(Collision collision)

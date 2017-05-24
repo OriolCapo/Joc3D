@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\RestartPositions.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Ball_Script.cs" />

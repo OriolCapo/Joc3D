@@ -6,6 +6,7 @@ public class Enemy_Controller : MonoBehaviour {
 
 	private GameObject ball;
 	public float speed = 1000.0f;
+	public int goal = 1;
 
 	private Rigidbody rb;
 	private LineRenderer laserLine;
@@ -57,7 +58,11 @@ public class Enemy_Controller : MonoBehaviour {
 	}
 
 	void updatePosition() {
-		Vector3 goalPosition = new Vector3 (0,0,170);
+		Vector3 goalPosition;
+		if(goal ==1)
+			goalPosition = new Vector3 (0,0,170);
+		else 
+			goalPosition = new Vector3 (0,0,-170);
 		Vector3 direction = Vector3.Normalize(goalPosition - ball.transform.position);
 		positionBehindBall = ball.transform.position - (60 * direction);
 	}
