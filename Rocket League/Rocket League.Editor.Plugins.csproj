@@ -136,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
-    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

@@ -19,8 +19,10 @@ public class SelectCars : MonoBehaviour {
 	private bool left, right;
 	private float idx;
 
-	private string[] carNames = new string[] { "Mustang", "Red Car", "SoftCar" };
-	private string[] infos = new string[] { "Orange", "Red", "Grey" };
+	private string[] carNames = new string[] { "Rex Hasta", "Basilikos", "Rienfleche" };
+	private string[] infos = new string[] { "The \"Mario\" of rocket cars.\nThis car has balanced stats all around, making it good for beginners and veterans alike.\nYou can't go wrong with this car."
+        , "This car is STRONG.\nWhile not on the faster side, this car has incredible strenght, enabling it to take hits better, and hit back harder.\nTruly a powerhouse to fear on the field."
+        , "In one word, this car is FAST.\nThis car is able to fleet around the field at unmatched speeds. However, it comes at a cost for it's steering and strenght.\nNot recommended for beginners." };
 
 	void Start () {
 		circumcentre = new Vector3 (0.0f,2.0f,-23.09f);

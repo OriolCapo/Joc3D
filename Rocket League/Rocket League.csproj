@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CallFade.cs" />
     <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
     <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
@@ -104,14 +105,26 @@
     <Compile Include="Assets\Scripts\RandomJump.cs" />
     <Compile Include="Assets\Scripts\RecieveHit.cs" />
     <Compile Include="Assets\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Scripts\RestartPositions.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\Bots_Controller.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\BrakeLight.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\CarAIControl.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\CarAudio.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\CarController.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\CarSelfRighting.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\CarUserControl.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\Mudguard.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\SkidTrail.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\Suspension.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\WheelEffects.cs" />
     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\Scripts\SelectCars.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\Scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
-    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
