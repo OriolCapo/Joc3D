@@ -8,6 +8,7 @@ public class Ball_Script : MonoBehaviour {
 	private int count_t1, count_t2;
 	private Rigidbody rb;
 	private float totalTime = 180f;
+	private bool scored = false;
 
 	public Text t1;
 	public Text t2;
@@ -26,12 +27,16 @@ public class Ball_Script : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (transform.position [2] < -170) {
+		if (transform.position [2] < -170 && !scored) {
+			scored = true;
 			++count_t1;
-			setBallToCenter ();
-		} else if (transform.position [2] > 170) {
+			Invoke ("setBallToCenter", 4);
+			//setBallToCenter ();
+		} else if (transform.position [2] > 170 && !scored) {
+			scored = true;
 			++count_t2;
-			setBallToCenter ();
+			Invoke ("setBallToCenter", 4);
+			//setBallToCenter ();
 		}
 
 		if (Input.GetKeyDown ("r"))
@@ -60,11 +65,13 @@ public class Ball_Script : MonoBehaviour {
 	}
 
 	void setBallToCenter(){
-		transform.position = new Vector3 (0, 5, 0);
+		transform.position = new Vector3 (0, 2, 0);
 		rb.isKinematic = true;
 		rb.isKinematic = false;
 		RestartPositions rp = GameObject.Find ("Stadium3").gameObject.GetComponent<RestartPositions> ();
 		rp.restartPositions ();
+
+		scored = false;
 	}
 
     private void OnCollisionEnter(Collision collision)
