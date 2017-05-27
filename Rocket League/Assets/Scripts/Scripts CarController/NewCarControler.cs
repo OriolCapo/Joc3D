@@ -23,30 +23,31 @@ public class NewCarControler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		float accel = Input.GetAxis ("Vertical");
-		float torque = Input.GetAxis ("Horizontal");
+		if (PlayerPrefs.GetInt ("onPlay") == 1) {
+			float accel = Input.GetAxis ("Vertical");
+			float torque = Input.GetAxis ("Horizontal");
 
-		for (int i = 0; i < 4; i++)
-		{
-			Quaternion quat;
-			Vector3 position;
-			wheelColliders[i].GetWorldPose(out position, out quat);
-			wheelMeshes[i].transform.position = position;
-			wheelMeshes[i].transform.rotation = quat;
+			for (int i = 0; i < 4; i++) {
+				Quaternion quat;
+				Vector3 position;
+				wheelColliders [i].GetWorldPose (out position, out quat);
+				wheelMeshes [i].transform.position = position;
+				wheelMeshes [i].transform.rotation = quat;
+			}
+			torque = Mathf.Clamp (torque, -1, 1);
+			float rot = torque * 30;
+			wheelColliders [0].steerAngle = rot;
+			wheelColliders [1].steerAngle = rot;
+
+
+			accel = Mathf.Clamp (accel, -1, 1);
+			float thrustTorque = accel * speed;
+			for (int i = 0; i < 4; i++) {
+				//wheelColliders [i].attachedRigidbody.AddTorque (accel*accelSpeed, 1, 1);
+				wheelColliders [i].motorTorque = thrustTorque;
+			}
+			AddDownForce ();
 		}
-		torque = Mathf.Clamp(torque, -1, 1);
-		float rot = torque*30;
-		wheelColliders[0].steerAngle = rot;
-		wheelColliders[1].steerAngle = rot;
-
-
-		accel = Mathf.Clamp(accel, -1, 1);
-		float thrustTorque = accel * speed;
-		for (int i = 0; i < 4; i++) {
-			//wheelColliders [i].attachedRigidbody.AddTorque (accel*accelSpeed, 1, 1);
-			wheelColliders[i].motorTorque = thrustTorque;
-		}
-		AddDownForce ();
 	}
 
 	private void AddDownForce()
