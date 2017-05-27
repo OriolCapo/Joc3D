@@ -30,12 +30,12 @@ public class Ball_Script : MonoBehaviour {
 		if (transform.position [2] < -170 && !scored) {
 			scored = true;
 			++count_t1;
-			Invoke ("setBallToCenter", 4);
+			Invoke ("setBallToCenter", 3);
 			//setBallToCenter ();
 		} else if (transform.position [2] > 170 && !scored) {
 			scored = true;
 			++count_t2;
-			Invoke ("setBallToCenter", 4);
+			Invoke ("setBallToCenter", 3);
 			//setBallToCenter ();
 		}
 

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CallFade.cs" />
+     <Compile Include="Assets\InitializeField.cs" />
      <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
      <Compile Include="Assets\Scripts\SelectCars.cs" />
      <Compile Include="Assets\Scripts\SelectOnInput.cs" />
+     <Compile Include="Assets\Scripts\SetPlayMode.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

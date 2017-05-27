@@ -7,62 +7,28 @@ public class CameraController : MonoBehaviour {
     public GameObject car1;
 	public GameObject car2;
 	public GameObject car3;
-	public GameObject car4;
-	public GameObject car5;
-	public GameObject car6;
 	public GameObject ball;
 
 	private GameObject selectedCar;
-	private Vector3 offset1, offset2;
-	private int idx;
+	private Vector3 offset;
+	//private int idx;
 	private bool followBall = false;
 
     void Start()
     {
-        offset1 = new Vector3(0, 5, -20);
-		offset2 = new Vector3(0, 5, 20);
-		//selectedCar = car1;
+		offset = new Vector3(0, 5, 0);
+		selectedCar = car1;
 		//idx = 1;
-		//updateCamera ();
-
-
-		//transform.rotation = selectedCar.transform.rotation;
+		updateCamera ();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-		
-		if(idx > 3)
-			transform.position = selectedCar.transform.position + offset1;
-		else 
-			transform.position = selectedCar.transform.position + offset2;
-
-		if (Input.GetKeyDown ("1")) {
-			selectedCar = car1;
-			idx = 1;
-			transform.rotation = selectedCar.transform.rotation;
-		} else if (Input.GetKeyDown ("2")) {
-			selectedCar = car2;
-			idx = 2;
-			transform.rotation = selectedCar.transform.rotation;
-		} else if (Input.GetKeyDown ("3")) {
-			selectedCar = car3;
-			idx = 3;
-			transform.rotation = selectedCar.transform.rotation;
-		} else if (Input.GetKeyDown ("4")) {
-			selectedCar = car4;
-			idx = 4;
-			transform.rotation = selectedCar.transform.rotation;
-		} else if (Input.GetKeyDown ("5")) {
-			selectedCar = car5;
-			idx = 5;
-			transform.rotation = selectedCar.transform.rotation;
-		} else if (Input.GetKeyDown ("6")) {
-			selectedCar = car6;
-			idx = 6;
-			transform.rotation = selectedCar.transform.rotation;
+		if (Input.GetKeyDown (KeyCode.C)) {
+			followBall = true;
+		} else if (Input.GetKeyDown (KeyCode.V)) {
+			followBall = false;
 		}
-		//transform.rotation = selectedCar.transform.rotation;
 
 		updateCamera ();
     }
@@ -70,23 +36,19 @@ public class CameraController : MonoBehaviour {
 	void updateCamera(){
 		Vector3 posAct = selectedCar.transform.position;
 		Vector3 posBall = ball.transform.position;
+		//En aquest mode, la pilota sempre es veu
 		if (followBall) {
-			Vector3 posCamera = (posBall - posAct);
-			posCamera = new Vector3 (posCamera[0], 0, posCamera[2]);
-			posCamera = posAct - posCamera.normalized*10;
-			posCamera += new Vector3 (0, 4, 0);
-
-			transform.position = posCamera;
-			print (posCamera);
-			//if(idx<=3) posCamera -= posCamera.normalized * 5;
-			//else posCamera += posCamera.normalized * 5;
-			transform.rotation = Quaternion.LookRotation (ball.transform.position);
-			//print (Time.time + " hola");
+			Vector3 direction = (posBall-posAct).normalized;
+			direction = new Vector3(direction[0], 0, direction[2]);
+			Vector3 posCam = posAct - direction * 20;
+			transform.position = posCam + offset;
+			transform.LookAt(posBall);
+		//Aqui la camara sempre segueix els moviments del jugador
 		} else {
-			if(idx <= 3)
-				transform.position = selectedCar.transform.position + offset1;
-			else 
-				transform.position = selectedCar.transform.position + offset2;
+			Vector3 frwrd = selectedCar.transform.forward;
+			Vector3 posCam = posAct - (frwrd.normalized * 20);
+			transform.position = posCam + offset;
+			transform.rotation = selectedCar.transform.rotation;
 		}
 	}
 
@@ -95,18 +57,16 @@ public class CameraController : MonoBehaviour {
         if (eleccio == 1)
         {
             selectedCar = car1;
-            idx = 1;
-            transform.rotation = selectedCar.transform.rotation;
+            //idx = 1;
         }else if (eleccio == 2)
         {
             selectedCar = car2;
-            idx = 2;
-            transform.rotation = selectedCar.transform.rotation;
+            //idx = 2;
         }else if (eleccio == 3)
         {
             selectedCar = car3;
-            idx = 3;
-            transform.rotation = selectedCar.transform.rotation;
+            //idx = 3;
         }
+		updateCamera ();
     }
 }
