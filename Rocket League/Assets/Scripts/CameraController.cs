@@ -21,9 +21,11 @@ public class CameraController : MonoBehaviour {
     {
         offset1 = new Vector3(0, 5, -20);
 		offset2 = new Vector3(0, 5, 20);
-		selectedCar = car1;
-		idx = 1;
-		updateCamera ();
+		//selectedCar = car1;
+		//idx = 1;
+		//updateCamera ();
+
+
 		//transform.rotation = selectedCar.transform.rotation;
     }
 
@@ -87,4 +89,24 @@ public class CameraController : MonoBehaviour {
 				transform.position = selectedCar.transform.position + offset2;
 		}
 	}
+
+    public void changeSelectedCar(int eleccio)
+    {
+        if (eleccio == 1)
+        {
+            selectedCar = car1;
+            idx = 1;
+            transform.rotation = selectedCar.transform.rotation;
+        }else if (eleccio == 2)
+        {
+            selectedCar = car2;
+            idx = 2;
+            transform.rotation = selectedCar.transform.rotation;
+        }else if (eleccio == 3)
+        {
+            selectedCar = car3;
+            idx = 3;
+            transform.rotation = selectedCar.transform.rotation;
+        }
+    }
 }

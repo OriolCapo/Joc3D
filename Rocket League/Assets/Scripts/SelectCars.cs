@@ -32,7 +32,8 @@ public class SelectCars : MonoBehaviour {
 		right = false;
 		idx = 0.0f;
 		setInformation ((int)idx);
-	}
+        PlayerPrefs.SetInt("SelectedCar", ((int)idx + 1));
+    }
 	
 
 	void Update()
@@ -44,7 +45,8 @@ public class SelectCars : MonoBehaviour {
 			idx += 1;
 			if (idx == 3)
 				idx = 0;
-			hideInformation (false);
+            PlayerPrefs.SetInt("SelectedCar", ((int)idx + 1));
+            hideInformation (false);
 			setInformation ((int)idx);
 		} else if (Input.GetKeyDown ("left") && !right && !left){
 			left = true;
@@ -53,7 +55,8 @@ public class SelectCars : MonoBehaviour {
 			idx -= 1;
 			if (idx == -1)
 				idx = 2;
-			hideInformation (false);
+            PlayerPrefs.SetInt("SelectedCar", ((int)idx + 1));
+            hideInformation (false);
 			setInformation ((int)idx);
 		}
 		if (right) {
