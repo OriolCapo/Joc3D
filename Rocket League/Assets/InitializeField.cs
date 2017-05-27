@@ -35,7 +35,6 @@ public class InitializeField : MonoBehaviour {
         playerMode = PlayerPrefs.GetInt("Mode");
         playerCar = PlayerPrefs.GetInt("SelectedCar");
 
-
         int musicTrack = Random.Range(1, 7);
 
         switch (musicTrack)
