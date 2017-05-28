@@ -29,9 +29,42 @@ public class CameraController : MonoBehaviour {
 		} else if (Input.GetKeyDown (KeyCode.V)) {
 			followBall = false;
 		}
-
+		changePlayer ();
 		updateCamera ();
     }
+
+	void changePlayer(){
+		GameObject pl;
+		if (Input.GetKeyDown ("1")) {
+			pl = GameObject.Find ("/Cars/Player/Player_1");
+			if (!pl.activeSelf) {
+				pl = GameObject.Find ("/Cars/Player/Player_2");
+				if (!pl.activeSelf) {
+					pl = GameObject.Find ("/Cars/Player/Player_3");
+				}
+			}
+			selectedCar = pl;
+		} else if (Input.GetKeyDown ("2")) {
+			pl = GameObject.Find ("/Cars/Allies/Ally1/Ally1_1");
+			if (!pl.activeSelf) {
+				pl = GameObject.Find ("/Cars/Allies/Ally1/Ally1_2");
+				if (!pl.activeSelf) {
+					pl = GameObject.Find ("/Cars/Allies/Ally1/Ally1_3");
+				}
+			}
+			selectedCar = pl;
+
+		} else if (Input.GetKeyDown ("3")) {
+			pl = GameObject.Find ("/Cars/Allies/Ally2/Ally2_1");
+			if (!pl.activeSelf) {
+				pl = GameObject.Find ("/Cars/Allies/Ally2/Ally2_2");
+				if (!pl.activeSelf) {
+					pl = GameObject.Find ("/Cars/Allies/Ally2/Ally2_3");
+				}
+			}
+			selectedCar = pl;
+		}
+	}
 
 	void updateCamera(){
 		Vector3 posAct = selectedCar.transform.position;

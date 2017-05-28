@@ -45,12 +45,12 @@ namespace UnityStandardAssets.Vehicles.Car
         public void EmitTyreSmoke()
         {
 			
-            skidParticles.transform.position = transform.position - transform.up*m_WheelCollider.radius;
+/*            skidParticles.transform.position = transform.position - transform.up*m_WheelCollider.radius;
             skidParticles.Emit(1);
             if (!skidding)
             {
                 StartCoroutine(StartSkidTrail());
-            }
+            }*/
 
         }
 
@@ -58,15 +58,15 @@ namespace UnityStandardAssets.Vehicles.Car
         public void PlayAudio()
         {
 			
-            m_AudioSource.Play();
-            PlayingAudio = true;
+//            m_AudioSource.Play();
+//            PlayingAudio = true;
         }
 
 
         public void StopAudio()
         {
-            m_AudioSource.Stop();
-            PlayingAudio = false;
+//            m_AudioSource.Stop();
+//            PlayingAudio = false;
         }
 
 

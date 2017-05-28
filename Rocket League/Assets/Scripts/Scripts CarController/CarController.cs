@@ -195,7 +195,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void ApplyDrive(float accel, float footbrake)
         {
-
+			accel *= 3.5f;
             float thrustTorque;
             switch (m_CarDriveType)
             {
@@ -221,6 +221,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             for (int i = 0; i < 4; i++)
             {
+				m_Rigidbody = GetComponent<Rigidbody> ();
                 if (CurrentSpeed > 5 && Vector3.Angle(transform.forward, m_Rigidbody.velocity) < 50f)
                 {
                     m_WheelColliders[i].brakeTorque = m_BrakeTorque*footbrake;
