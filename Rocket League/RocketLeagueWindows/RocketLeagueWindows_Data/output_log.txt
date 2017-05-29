@@ -1,0 +1,81 @@
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940M (ID=0x1347)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.7654
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.025 seconds
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DmnT\Documents\Joc3D\Rocket League\RocketLeagueWindows\RocketLeagueWindows_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.501233 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 55f0 -> priority: 1 
+  Thread -> id: 2d6c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.385775 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 639.
+Total: 1.208493 ms (FindLiveObjects: 0.035555 ms CreateObjectMapping: 0.031209 ms MarkObjects: 0.491456 ms  DeleteObjects: 0.649086 ms)
+
+The referenced script on this Behaviour (Game Object 'Button') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.420641 ms
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 991.
+Total: 2.815208 ms (FindLiveObjects: 0.075456 ms CreateObjectMapping: 0.047407 ms MarkObjects: 0.291950 ms  DeleteObjects: 2.399208 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.071011 ms
+
+Unloading 242 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 5.960293 ms (FindLiveObjects: 0.054123 ms CreateObjectMapping: 0.065185 ms MarkObjects: 0.349629 ms  DeleteObjects: 5.490565 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.438913 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2224.
+Total: 0.798024 ms (FindLiveObjects: 0.149728 ms CreateObjectMapping: 0.068740 ms MarkObjects: 0.510419 ms  DeleteObjects: 0.068345 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RecieveHit.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+GAMEMANAGER:: TimeScale: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+GAMEMANAGER:: TimeScale: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.010468 ms
+
+Unloading 164 unused Assets to reduce memory usage. Loaded Objects now: 646.
+Total: 30.574604 ms (FindLiveObjects: 0.052148 ms CreateObjectMapping: 0.048987 ms MarkObjects: 0.767604 ms  DeleteObjects: 29.705074 ms)
+

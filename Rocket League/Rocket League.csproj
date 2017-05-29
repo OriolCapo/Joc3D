@@ -84,8 +84,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Car.cs" />
-    <Compile Include="Assets\HOUHOU2.cs" />
+    <Compile Include="Assets\BeforeMatch.cs" />
+    <Compile Include="Assets\CarCharacteristics.cs" />
     <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
     <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
@@ -112,15 +112,14 @@
     <Compile Include="Assets\Scripts\RecieveHit.cs" />
     <Compile Include="Assets\Scripts\ResizePanel.cs" />
     <Compile Include="Assets\Scripts\RestartPositions.cs" />
-    <Compile Include="Assets\Scripts\Scripts CarController\Bots_Controller.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\BrakeLight.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\CarAIControl.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\CarAudio.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\CarController.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\CarSelfRighting.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\CarUserControl.cs" />
+    <Compile Include="Assets\Scripts\Scripts CarController\Explote.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\Mudguard.cs" />
-    <Compile Include="Assets\Scripts\Scripts CarController\NewCarControler.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\SkidTrail.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\Suspension.cs" />
     <Compile Include="Assets\Scripts\Scripts CarController\WheelEffects.cs" />

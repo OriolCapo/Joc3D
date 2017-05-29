@@ -12,6 +12,7 @@ public class Enemy_Controller : MonoBehaviour {
 	private Vector3 positionBehindBall;
 	private Vector3 goalPosition;
 	private int team;
+    private float speedFactor;
 
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -24,7 +25,15 @@ public class Enemy_Controller : MonoBehaviour {
 			team = 1;
 		}
 
-	}
+        speedFactor = GetComponent<CarCharacteristics>().speedFactor;
+        speedFactor = (float)(speedFactor / 8.0);
+
+        if (speedFactor != 0)
+        {
+            speed = speed * speedFactor;
+        }
+
+    }
 
 	void FixedUpdate () {
 		for (int i = 0; i < 4; i++) {

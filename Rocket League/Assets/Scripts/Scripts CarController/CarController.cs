@@ -55,6 +55,10 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
+
+        private float speedFactor;
+        private float accelFactor;
+
         // Use this for initialization
         private void Start()
         {
@@ -69,6 +73,19 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+
+            speedFactor = GetComponent<CarCharacteristics>().speedFactor;
+            speedFactor = (float)(speedFactor / 8.0);
+
+            if (speedFactor != 0)
+            {
+                m_Topspeed = m_Topspeed * speedFactor;
+            }
+            
+
+            accelFactor = GetComponent<CarCharacteristics>().accelFactor;
+            accelFactor = (float)(accelFactor / 8.0);
+
         }
 
 
@@ -195,7 +212,17 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void ApplyDrive(float accel, float footbrake)
         {
-			accel *= 3.5f;
+			
+            if (accelFactor != 0)
+            {
+                accel = accel * 5f *accelFactor;
+            }
+            else
+            {
+                accel *= 5f;
+            }
+            
+
             float thrustTorque;
             switch (m_CarDriveType)
             {
