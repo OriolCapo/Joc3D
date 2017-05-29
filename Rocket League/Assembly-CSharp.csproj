@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BeforeMatch.cs" />
      <Compile Include="Assets\Models\Mustang\Scripts\TakeScreenshot.cs" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />

@@ -29,36 +29,40 @@ namespace UnityStandardAssets.Vehicles.Car
 			count_t2 = 0;
 			rb = GetComponent<Rigidbody> ();
 			gameTransition = GetComponent<gameTransitions>();
-			gameTransition.getReady ();
 			updateText (true);
 		}
 
 		// Update is called once per frame
 		void FixedUpdate () {
-			onPlay = PlayerPrefs.GetInt ("onPlay") == 1;
-			if (onPlay) {
-				if (transform.position [2] < -170 && !scored) {
-					scoreGoal (1);
-				} else if (transform.position [2] > 170 && !scored) {
-					scoreGoal (2);
-				}
+			if (PlayerPrefs.GetInt ("startGame") == 1) {
+				PlayerPrefs.SetInt ("startGame", 0);
+				gameTransition.getReady ();
+			} else {
+				onPlay = PlayerPrefs.GetInt ("onPlay") == 1;
+				if (onPlay) {
+					if (transform.position [2] < -170 && !scored) {
+						scoreGoal (1);
+					} else if (transform.position [2] > 170 && !scored) {
+						scoreGoal (2);
+					}
 
-				if (Input.GetKeyDown ("r")) {
-					setBallToCenter ();
-					RestartPositions rp = GameObject.Find ("Stadium3").gameObject.GetComponent<RestartPositions> ();
-					rp.setStiffness (3.0f);
-				}
-				if (Input.GetKeyDown (KeyCode.Plus)) {
-					totalTime += 20.0f;
-				}
-				if (Input.GetKeyDown ("o")) {
-					++count_t1;
-				}
-				if (Input.GetKeyDown ("p")) {
-					++count_t2;
-				}
-				updateText (false);
+					if (Input.GetKeyDown ("r")) {
+						setBallToCenter ();
+						RestartPositions rp = GameObject.Find ("Stadium3").gameObject.GetComponent<RestartPositions> ();
+						rp.setStiffness (3.0f);
+					}
+					if (Input.GetKeyDown (KeyCode.Plus)) {
+						totalTime += 20.0f;
+					}
+					if (Input.GetKeyDown ("o")) {
+						++count_t1;
+					}
+					if (Input.GetKeyDown ("p")) {
+						++count_t2;
+					}
+					updateText (false);
 
+				}
 			}
 		}
 

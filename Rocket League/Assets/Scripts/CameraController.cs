@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour {
 	private Vector3 offset;
 	//private int idx;
 	private bool followBall = false;
+	private bool working = false;
 
     void Start()
     {
@@ -24,14 +25,20 @@ public class CameraController : MonoBehaviour {
 
     void FixedUpdate()
     {
-		if (Input.GetKeyDown (KeyCode.C)) {
-			followBall = true;
-		} else if (Input.GetKeyDown (KeyCode.V)) {
-			followBall = false;
+		if (working) {
+			changePlayer ();
+			updateCamera ();
+			if (Input.GetKeyDown (KeyCode.C)) {
+				followBall = true;
+			} else if (Input.GetKeyDown (KeyCode.V)) {
+				followBall = false;
+			}
 		}
-		changePlayer ();
-		updateCamera ();
     }
+
+	public void setWorking(bool b){
+		working = b;
+	}
 
 	void changePlayer(){
 		GameObject pl;
