@@ -364,5 +364,32 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             return false;
         }
+
+		public void restartWheels(){
+			foreach (WheelCollider col in m_WheelColliders) {
+				col.motorTorque = 0;
+				col.steerAngle = 0;
+			}
+			setStiffness (0.0001f);
+		}
+
+		public void setStiffness(float value){
+			foreach (WheelCollider col in m_WheelColliders) {
+				WheelFrictionCurve frictionCurve = col.forwardFriction;
+				frictionCurve.stiffness = value;//whatver you want
+				col.forwardFriction = frictionCurve;
+			}
+		}
+			
+		public void Jump(float force){
+			bool grounded = true;
+			foreach (WheelCollider col in m_WheelColliders) {
+				if (!col.isGrounded)
+					grounded = false;
+			}
+			if (grounded) {
+				m_Rigidbody.AddForce (gameObject.transform.up * force);
+			}
+		}
     }
 }

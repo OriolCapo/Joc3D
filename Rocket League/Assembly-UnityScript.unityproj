@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\HOUHOU.js" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
      <Compile Include="Assets\Models\Mustang\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />

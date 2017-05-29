@@ -25,7 +25,7 @@ public class HitSomething : MonoBehaviour {
             recieveHit.GetsHit((float)1.2*rb.velocity);
         }else if (collision.gameObject.CompareTag("Car")){
             recieveHit = collision.gameObject.GetComponent<RecieveHit>();
-            recieveHit.GetsHit((float)1000 * rb.velocity);
+            recieveHit.GetsHit((float)100 * rb.velocity);
         }
     }
 }

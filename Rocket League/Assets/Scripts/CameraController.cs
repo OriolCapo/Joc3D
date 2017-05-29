@@ -63,6 +63,15 @@ public class CameraController : MonoBehaviour {
 				}
 			}
 			selectedCar = pl;
+		} else if (Input.GetKeyDown ("4")) {
+			pl = GameObject.Find ("/Cars/Enemies/Enemy_1");
+			if (!pl.activeSelf) {
+				pl = GameObject.Find ("/Cars/Enemies/Enemy_2");
+				if (!pl.activeSelf) {
+					pl = GameObject.Find ("/Cars/Enemies/Enemy_3");
+				}
+			}
+			selectedCar = pl;
 		}
 	}
 
